@@ -107,7 +107,7 @@
       margin-bottom: 20px;
     }
    /* 视频容器：使用 Flexbox 布局 */
-.video-container {
+  .video-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px; /* 视频项之间的间距 */
@@ -116,7 +116,7 @@
 }
 
 /* 单个视频项 */
-.video-item {
+  .video-item {
   flex: 1 1 calc(33.333% - 20px); /* 三个视频并排，减去间距 */
   min-width: 300px; /* 最小宽度，防止在极窄屏幕下变形 */
   background-color: #fff;
@@ -127,7 +127,7 @@
 }
 
 /* 视频标签 */
-video {
+  video {
   width: 100%;
   height: auto;
   display: block;
@@ -135,7 +135,7 @@ video {
 }
 
 /* 响应式布局：在小屏幕上显示为单列 */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .video-item {
     flex-basis: 100%; /* 宽度占满容器 */
   }
