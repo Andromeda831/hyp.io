@@ -106,17 +106,14 @@
     .video-item {
       margin-bottom: 20px;
     }
-   /* 视频容器样式 */
-.video-container {
-  display: flex; /* 使用 flexbox 布局 */
-  gap: 20px; /* 视频之间的间距 */
-  margin: 20px 0;
-}
-
-/* 视频项样式 */
-.video-item {
-  flex: 1; /* 每个视频项占据相等的宽度 */
-}
+   /* 视频容器：使用 Flexbox 布局 */
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* 视频项之间的间距 */
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
     /* 单个视频项 */
     .video-item {
@@ -124,12 +121,12 @@
       min-width: 300px; /* 最小宽度，防止在极窄屏幕下变形 */
       background-color: #fff;
       border-radius: 8px;
-
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: transform 0.3s ease;
     }
 
-    
+
 
     /* 视频标签 */
     video {
@@ -150,8 +147,9 @@
       .video-item {
         flex-basis: 100%; /* 宽度占满容器 */
       }
+    .abstract, .method {
+      line-height: 1.6;
     }
-    
     .method-figure {
       text-align: center;
       margin: 20px 0;
