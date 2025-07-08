@@ -15,7 +15,35 @@
       padding: 0 20px;
       color: #333;
     }
-    
+    /* 视频容器：开启 Flex，让子元素横向排列 */
+.video-container {
+  display: flex;
+  /* 子元素超出容器时自动换行（可选，比如响应式适配小屏幕） */
+  flex-wrap: wrap;  
+  /* 均匀分配剩余空间，让视频之间有间隔 */
+  justify-content: space-between; 
+  /* 容器内边距，给视频留呼吸感 */
+  padding: 16px;  
+  /* 限制最大宽度，让布局更规整（可选） */
+  max-width: 1200px; 
+  /* 让容器居中（可选） */
+  margin: 0 auto;  
+}
+
+/* 单个视频项：设置基础样式、宽度 */
+.video-item {
+  /* 让每个视频占 1/3 左右宽度，留出间隔 */
+  flex: 0 0 calc(33.333% - 16px); 
+  /* 视频之间的间距（和 justify-content 配合） */
+  margin-bottom: 16px; 
+}
+
+/* 视频标签：填满父容器 */
+video {
+  width: 100%;
+  height: auto;
+  display: block; /* 去掉底部默认空隙 */
+}
     header {
       text-align: center;
       margin-bottom: 30px;
