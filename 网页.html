@@ -107,46 +107,40 @@
       margin-bottom: 20px;
     }
    /* 视频容器：使用 Flexbox 布局 */
-    .video-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px; /* 视频项之间的间距 */
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* 视频项之间的间距 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    /* 单个视频项 */
-    .video-item {
-      flex: 1 1 calc(33.333% - 20px); /* 三个视频并排，减去间距 */
-      min-width: 300px; /* 最小宽度，防止在极窄屏幕下变形 */
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
+/* 单个视频项 */
+.video-item {
+  flex: 1 1 calc(33.333% - 20px); /* 三个视频并排，减去间距 */
+  min-width: 300px; /* 最小宽度，防止在极窄屏幕下变形 */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
 
+/* 视频标签 */
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
 
+/* 响应式布局：在小屏幕上显示为单列 */
+@media (max-width: 768px) {
+  .video-item {
+    flex-basis: 100%; /* 宽度占满容器 */
+  }
+}
 
-    /* 视频标签 */
-    video {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 8px 8px 0 0;
-    }
-
-    /* 视频控制栏样式 */
-    video::-webkit-media-controls-panel {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #fff;
-    }
-
-    /* 响应式布局：在小屏幕上显示为单列 */
-    @media (max-width: 768px) {
-      .video-item {
-        flex-basis: 100%; /* 宽度占满容器 */
-      }
     .abstract, .method {
       line-height: 1.6;
     }
@@ -210,33 +204,32 @@
     
   </section>
   <!-- 视频 -->
-  <section class="videos">
-  <h2>Videos</h2>
-
-  
-  </div>
-    <!-- 视频 1 -->
-    <div class="video-item">
-      <video controls width="100%">
-        <source src="https://raw.githubusercontent.com/Andromeda831/huanyi/main/1.mp4">
-        你的浏览器不支持 video 标签，请升级浏览器~
-      </video>
+ <section class="videos">
+    <h2>Videos</h2>
+    <div class="video-container">
+      <!-- 视频 1 -->
+      <div class="video-item">
+        <video controls width="100%">
+          <source src="https://raw.githubusercontent.com/Andromeda831/huanyi/main/1.mp4">
+          你的浏览器不支持 video 标签，请升级浏览器~
+        </video>
+      </div>
+      <!-- 视频 2 -->
+      <div class="video-item">
+        <video controls width="100%">
+          <source src="https://raw.githubusercontent.com/Andromeda831/huanyi/main/2.mp4">
+          你的浏览器不支持 video 标签，请升级浏览器~
+        </video>
+      </div>
+      <!-- 视频 3 -->
+      <div class="video-item">
+        <video controls width="100%">
+          <source src="https://raw.githubusercontent.com/Andromeda831/huanyi/main/3.mp4">
+          你的浏览器不支持 video 标签，请升级浏览器~
+        </video>
+      </div>
     </div>
-    <!-- 视频 2 -->
-    <div class="video-item">
-      <video controls width="100%">
-        <source src="https://raw.githubusercontent.com/Andromeda831/huanyi/main/2.mp4">
-        你的浏览器不支持 video 标签，请升级浏览器~
-      </video>
-    </div>
-    <!-- 视频 3 -->
-    <div class="video-item">
-      <video controls width="100%">
-        <source src="https://raw.githubusercontent.com/Andromeda831/huanyi/main/3.mp4">
-        你的浏览器不支持 video 标签，请升级浏览器~
-      </video>
-    </div>
-    <!-- 视频 4 -->
+   <!-- 视频 5 -->
     <div class="video-item">
       <video controls width="100%">
         <source src="https://raw.githubusercontent.com/Andromeda831/huanyi/main/4.mp4">
@@ -258,7 +251,7 @@
       </video>
     </div>
   </div>
-
+  </section>
 
 
     <div class="video-item">
