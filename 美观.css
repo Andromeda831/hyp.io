@@ -23,7 +23,7 @@ header h1 {
   font-size: 86px;
   background: linear-gradient(90deg,  rgb(122, 125, 218), rgb(231,188,198)); 
   -webkit-background-clip: text; /* 让背景只作用于文字 */
-  background-clip: text;
+  -moz-background-clip: text;
   color: transparent; /* 文字本身透明，显示背景渐变 */
   margin-bottom: 10px;
 }
